@@ -16,7 +16,7 @@ class CustomerList(APIView):
         for i in Customer_data["Customer"]["objects"]:
             l.append(i)
             return l
-        
+
     def post(self, request, format=None):
         serializer = CustomerSerializer(data=request.data)
         if serializer.is_valid():
