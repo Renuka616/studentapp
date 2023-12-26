@@ -1,3 +1,5 @@
-from django.test import TestCase
+from data import Customer_data
 
-# Create your tests here.
+for i in Customer_data["Customer"]["objects"]:
+    print(i)
+
