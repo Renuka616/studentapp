@@ -5,16 +5,18 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
+from data import Customer_data
 
 
 class CustomerList(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, format=None):
-        snippets = Customer.objects.all()
-        serializer = CustomerSerializer(snippets, many=True)
-        return Response(serializer.data)
-
+        l=[]
+        for i in Customer_data["Customer"]["objects"]:
+            l.append(i)
+            return l
+        
     def post(self, request, format=None):
         serializer = CustomerSerializer(data=request.data)
         if serializer.is_valid():
