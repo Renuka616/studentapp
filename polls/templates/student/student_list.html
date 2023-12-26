@@ -1,0 +1,8 @@
+<h1> students </h1>
+{% if students %}
+    {% for student in students %}
+        <a href='{% url "polls:detail-student" student.pk %}'> {{ student.first_name }} {{ student.last_name }}</a><br>
+    {% endfor %}
+{% else %}
+    <h3> student details is not there in DB </h3>
+{% endif %}

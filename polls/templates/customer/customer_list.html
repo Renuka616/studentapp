@@ -1,0 +1,6 @@
+<h2>Customer list</h2>
+{% for customer in customer %}
+     <li>
+          <a href='{% url "polls:customer-detail" customer.pk %}'>{{customer.first_name}}</a>
+     </li>
+{% endfor %}

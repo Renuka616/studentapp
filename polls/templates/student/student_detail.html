@@ -1,0 +1,13 @@
+<h1>{{ student.first_name }}{{ student.last_name }}</h1>
+<li> {{ student.email }} </li>
+<li> {{ student.dob }}</li>
+<li> {{ student.mobile }} </li>
+{% for interview in student.interview_set.all %}
+    <li> {{ interview.student }} </li>
+    <li> {{ interview.name }}</li>
+    <li> {{ interview.mode }}</li>
+    <li> {{ interview.sub_mode }}</li>
+    <li> {{ interview.marks }}</li>
+    <li> {{ interview.max_marks }}</li>
+    <li> {{ interview.result }}</li>
+{% endfor %}

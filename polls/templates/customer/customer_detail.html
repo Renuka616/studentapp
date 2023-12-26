@@ -1,0 +1,19 @@
+<h1>Customer details </h1>
+<li>{{customer.first_name}}</li>
+<li>{{customer.last_name}}</li>
+<li>{{customer.short_name}}</li>
+<li>{{customer.email}}</li>
+<li>{{customer.address}}</li>
+<li>{{customer.mobile}}</li>
+
+<table>
+{% for vehicle in customer.vehicle_set.all %}
+<tr>
+    <td>{{ vehicle.reg_num }}</td>
+    <td>{{ vehicle.reg_date }}</td>
+    <td>{{ vehicle.engine_num }}</td>
+    <td><img src="{{vehicle.rc.url}}" height="50px" width="60px"></td>
+</tr>
+{% endfor %}
+
+</table>

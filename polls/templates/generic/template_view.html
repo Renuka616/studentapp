@@ -1,0 +1,9 @@
+<h1> Customer page-generic_views </h1>
+{% if customers %}
+    {% for customer in customers %}
+       {{ customer.first_name }}</br>
+       {{ customer.last_name }}</br>
+    {% endfor %}
+{% else %}
+    <h3> No customers in db </h3>
+{% endif %}

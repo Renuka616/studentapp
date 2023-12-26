@@ -1,0 +1,9 @@
+<h1>Email create</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name = "from_email" placeholder="Enter your from_email"></br>
+    <input type="text" name = "to_email" placeholder="Enter your to_email"></br>
+    <input type="text" name = "subject" placeholder="Enter your subject"></br>
+    <input type="text" name = "body" placeholder="Enter body"></br>
+    <input type="submit" value="Create">
+</form>

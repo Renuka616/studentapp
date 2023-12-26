@@ -1,0 +1,10 @@
+<h3> FirstClass </h3>
+{% if firstclass %}
+   {% for firstclass in firstclass %}
+<!--        <li>-->
+<!--          <a href='{% url "polls:email-detail" email.pk %}'>{{ email.from_email }}</a>-->
+<!--        </li>-->
+   {% endfor %}
+{% else %}
+   <li> no studenys in db</li>
+{% endif %}

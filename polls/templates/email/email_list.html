@@ -1,0 +1,10 @@
+<h1> Emails </h1>
+{% if email %}
+   {% for email in email %}
+<!--        <li>-->
+<!--          <a href='{% url "polls:email-detail" email.pk %}'>{{ email.from_email }}</a>-->
+<!--        </li>-->
+   {% endfor %}
+{% else %}
+   <li> no emails in db</li>
+{% endif %}

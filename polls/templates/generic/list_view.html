@@ -1,0 +1,5 @@
+{% for customer in object_list %}
+<a href='{% url "polls:detail-view" customer.pk %}'>{{ customer.first_name }} {{ customer.last_name }}</a><br>
+{% empty %}
+No Customers yet.
+{% endfor %}

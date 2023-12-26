@@ -1,0 +1,12 @@
+<h3>User Details</h3>
+    i am {{name}} and {{gender}} my age {{age}}
+<h2> Education details </h2>
+{% if education %}
+    {% for each in education %}
+        <li>{{ each.type }}
+        {{ each.college }}
+        {{ each.location }}</li>
+    {% endfor %}
+{% else %}
+   No education details exit
+{% endif %}

@@ -1,0 +1,27 @@
+{{ mydata }}
+{% if mydata %}
+    <p> ***** my data is available *****</p>
+    {% for user in mydata %}
+    {{ forloop.counter }}
+        <li>{{ user }}</li>
+        <p>***********************</p>
+    <ul>
+        {% if user.gender == 'male' %}
+             <li>Full Name: {{user.fname}} {{user.lname}}</li>
+        {% else %}
+             <li> Full Name: {{user.lname}} {{user.fname}} </li>
+        {% endif %}
+        <li>Age:{{ user.age }}</li>
+        <li>Technologies:
+            <ul>
+                {% for t in user.tech %}
+                    <li>{{t}}</li>
+                {% endfor %}
+
+            </ul>
+        </li>
+    </ul>
+    {% endfor %}
+{% else %}
+    <p>**** my data is not available *****</p>
+{% endif %}

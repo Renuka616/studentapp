@@ -1,0 +1,5 @@
+{% for user in user %}
+     <li>
+          <a href='{% url "polls:detail-user" user.pk %}'>{{user.username}}</a>
+     </li>
+{% endfor %}
